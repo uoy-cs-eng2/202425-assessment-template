@@ -1,0 +1,49 @@
+plugins {
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("io.micronaut.application") version "4.4.4"
+    id('io.micronaut.openapi') version '4.4.4'
+}
+
+version = "0.1"
+group = "uk.ac.york.cs.eng2.end2end"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
+    implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut.serde:micronaut-serde-jackson")
+    implementation("io.micronaut.validation:micronaut-validation")
+    implementation("jakarta.validation:jakarta.validation-api")
+    runtimeOnly("ch.qos.logback:logback-classic")
+}
+
+application {
+    mainClass = "uk.ac.york.eng2.integration.Application"
+}
+java {
+    sourceCompatibility = JavaVersion.toVersion("17")
+    targetCompatibility = JavaVersion.toVersion("17")
+}
+
+graalvmNative.toolchainDetection = false
+
+micronaut {
+    runtime("netty")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("uk.ac.york.eng2.integration.*")
+    }
+    openapi {
+        // add OpenAPI configuration here
+    }
+}
+
+test {
+    // add test configuration here
+}

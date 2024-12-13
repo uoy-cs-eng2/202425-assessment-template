@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated offers -->
+      <package
+            uri="http://cs.york.ac.uk/eng2/YNUMBER/offers"
+            class="uk.ac.york.cs.eng2.offers.OffersPackage"
+            genModel="model/offers.genmodel"/>
+   </extension>
+
+</plugin>

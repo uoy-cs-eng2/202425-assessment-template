@@ -1,0 +1,14 @@
+// You should customise the URI, replacing YNUMBER with your examination number.
+//
+// You will need to set the namespaceURI in the uk.ac.york.cs.eng2.offers.evl/plugin.xml to the same URI.
+
+@namespace(uri="http://cs.york.ac.uk/eng2/YNUMBER/offers", prefix="dis")
+package offers;
+
+// Placeholder class to generate some code - replace from here on with your metamodel.
+//
+// You may want to delete the old generated code in src/ before generating code from the .genmodel.
+
+class Model {
+	
+}
