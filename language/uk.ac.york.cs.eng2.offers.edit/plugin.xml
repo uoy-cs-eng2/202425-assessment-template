@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated offers -->
       <factory
-            uri="http://cs.york.ac.uk/eng2/YNUMBER/offers"
+            uri="http://cs.york.ac.uk/eng2/202425/offers"
             class="uk.ac.york.cs.eng2.offers.provider.OffersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

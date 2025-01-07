@@ -6,7 +6,7 @@
       <constraintsBinding
             compose="true"
             constraints="evl/offers.evl"
-            namespaceURI="http://cs.york.ac.uk/eng2/YNUMBER/offers">
+            namespaceURI="http://cs.york.ac.uk/eng2/202425/offers">
       </constraintsBinding>
    </extension>
 

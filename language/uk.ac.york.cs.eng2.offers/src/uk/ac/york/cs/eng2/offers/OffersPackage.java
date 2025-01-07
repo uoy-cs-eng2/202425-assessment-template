@@ -36,7 +36,7 @@ public interface OffersPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://cs.york.ac.uk/eng2/YNUMBER/offers";
+	String eNS_URI = "http://cs.york.ac.uk/eng2/202425/offers";
 
 	/**
 	 * The package namespace name.

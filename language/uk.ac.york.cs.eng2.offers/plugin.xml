@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated offers -->
       <package
-            uri="http://cs.york.ac.uk/eng2/YNUMBER/offers"
+            uri="http://cs.york.ac.uk/eng2/202425/offers"
             class="uk.ac.york.cs.eng2.offers.OffersPackage"
             genModel="model/offers.genmodel"/>
    </extension>
