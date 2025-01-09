@@ -4,7 +4,6 @@ import java.io.File;
 import java.net.URISyntaxException;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.epsilon.egl.EglFileGeneratingTemplateFactory;
 import org.eclipse.epsilon.egl.EgxModule;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 
@@ -19,14 +18,9 @@ public class OffersGenerator {
 	private URI inputModelURI;
 
 	public Object run() throws URISyntaxException, Exception {
-		EgxModule module = new EgxModule();
+		EgxModule module = new EgxModule(targetFolder.getCanonicalPath());
+		module.getTemplateFactory().setDefaultFormatter(new WhitespaceStrippingJavaFormatter());
 
-		// Set target folder *before* we parse, so the template factory is given the right root location
-		EglFileGeneratingTemplateFactory templateFactory = new EglFileGeneratingTemplateFactory();
-		templateFactory.setOutputRoot(targetFolder.getCanonicalPath());
-		templateFactory.setDefaultFormatter(new WhitespaceStrippingJavaFormatter());
-		module.setTemplateFactory(templateFactory);
-		
 		// Parse the EGX and EGL scripts
 		boolean success = module.parse(OffersGenerator.class.getResource("scripts/main.egx").toURI());
 		if (!success) {
