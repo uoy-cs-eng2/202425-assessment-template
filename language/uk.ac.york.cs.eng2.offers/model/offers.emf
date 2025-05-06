@@ -1,6 +1,4 @@
-// You should customise the URI, replacing 202425 with your examination number.
-//
-// You will need to set the namespaceURI in the uk.ac.york.cs.eng2.offers.evl/plugin.xml to the same URI.
+// Keep the namespace URI as is. Submissions should be anonymous.
 
 @namespace(uri="http://cs.york.ac.uk/eng2/202425/offers", prefix="dis")
 package offers;
